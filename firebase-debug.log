@@ -1,0 +1,223 @@
+[debug] [2023-11-15T18:17:43.857Z] ----------------------------------------------------------------------
+[debug] [2023-11-15T18:17:43.861Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-15T18:17:43.863Z] CLI Version:   12.9.0
+[debug] [2023-11-15T18:17:43.863Z] Platform:      win32
+[debug] [2023-11-15T18:17:43.864Z] Node Version:  v16.13.0
+[debug] [2023-11-15T18:17:43.866Z] Time:          Wed Nov 15 2023 23:47:43 GMT+0530 (India Standard Time)
+[debug] [2023-11-15T18:17:43.866Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-15T18:17:44.112Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-15T18:17:44.113Z] > authorizing via signed-in user (pankajsharma9055362628@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\pankaj\OneDrive\Desktop\projects\check\chat-app-ps
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-11-15T18:18:11.984Z] Using project from CLI flag: chat-web-app-d1d12
+[debug] [2023-11-15T18:18:11.988Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 [none]
+[debug] [2023-11-15T18:18:13.494Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 403
+[debug] [2023-11-15T18:18:13.494Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-11-15T18:18:13.496Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-11-15T18:18:13.984Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project chat-web-app-d1d12. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-11-15T18:18:49.400Z] ----------------------------------------------------------------------
+[debug] [2023-11-15T18:18:49.404Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2023-11-15T18:18:49.405Z] CLI Version:   12.9.0
+[debug] [2023-11-15T18:18:49.406Z] Platform:      win32
+[debug] [2023-11-15T18:18:49.406Z] Node Version:  v16.13.0
+[debug] [2023-11-15T18:18:49.409Z] Time:          Wed Nov 15 2023 23:48:49 GMT+0530 (India Standard Time)
+[debug] [2023-11-15T18:18:49.409Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-15T18:18:49.610Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-15T18:18:49.611Z] > authorizing via signed-in user (pankajsharma9055362628@gmail.com)
+[debug] [2023-11-15T18:18:49.613Z] [iam] checking project chat-web-app-d1d12 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-15T18:18:49.618Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-web-app-d1d12:testIamPermissions [none]
+[debug] [2023-11-15T18:18:49.618Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-web-app-d1d12:testIamPermissions x-goog-quota-user=projects/chat-web-app-d1d12
+[debug] [2023-11-15T18:18:49.619Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-web-app-d1d12:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-15T18:18:51.798Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-web-app-d1d12:testIamPermissions 200
+[debug] [2023-11-15T18:18:51.799Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-web-app-d1d12:testIamPermissions {}
+[debug] [2023-11-15T18:18:51.799Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project chat-web-app-d1d12:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-11-15T18:18:51.803Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 [none]
+[debug] [2023-11-15T18:18:53.009Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 403
+[debug] [2023-11-15T18:18:53.010Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-11-15T18:18:53.013Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-11-15T18:18:53.018Z] Specified "public" directory "build" does not exist; Deploy to Hosting site "" may fail or be empty.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
+[debug] [2023-11-15T18:19:30.522Z] ----------------------------------------------------------------------
+[debug] [2023-11-15T18:19:30.526Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-11-15T18:19:30.527Z] CLI Version:   12.9.0
+[debug] [2023-11-15T18:19:30.528Z] Platform:      win32
+[debug] [2023-11-15T18:19:30.528Z] Node Version:  v16.13.0
+[debug] [2023-11-15T18:19:30.531Z] Time:          Wed Nov 15 2023 23:49:30 GMT+0530 (India Standard Time)
+[debug] [2023-11-15T18:19:30.531Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-15T18:19:30.769Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-15T18:19:30.770Z] > authorizing via signed-in user (pankajsharma9055362628@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\pankaj\OneDrive\Desktop\projects\check\chat-app-ps
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-11-15T18:19:33.487Z] Using project from CLI flag: chat-web-app-d1d12
+[debug] [2023-11-15T18:19:33.501Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 [none]
+[debug] [2023-11-15T18:19:34.901Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 403
+[debug] [2023-11-15T18:19:34.902Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-web-app-d1d12 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-11-15T18:19:34.903Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-11-15T18:19:35.416Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project chat-web-app-d1d12. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-11-15T18:20:50.881Z] ----------------------------------------------------------------------
+[debug] [2023-11-15T18:20:50.886Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pankaj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-11-15T18:20:50.888Z] CLI Version:   12.9.0
+[debug] [2023-11-15T18:20:50.888Z] Platform:      win32
+[debug] [2023-11-15T18:20:50.888Z] Node Version:  v16.13.0
+[debug] [2023-11-15T18:20:50.891Z] Time:          Wed Nov 15 2023 23:50:50 GMT+0530 (India Standard Time)
+[debug] [2023-11-15T18:20:50.892Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-15T18:20:51.105Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-15T18:20:51.106Z] > authorizing via signed-in user (pankajsharma9055362628@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\pankaj\OneDrive\Desktop\projects\check\chat-app-ps
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-11-15T18:20:52.830Z] Using project from CLI flag: chats-9b52c
+[debug] [2023-11-15T18:20:52.843Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chats-9b52c [none]
+[debug] [2023-11-15T18:20:53.956Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chats-9b52c 200
+[debug] [2023-11-15T18:20:53.957Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chats-9b52c {"projectId":"chats-9b52c","projectNumber":"994450607168","displayName":"Chats","name":"projects/chats-9b52c","resources":{"hostingSite":"chats-9b52c","realtimeDatabaseInstance":"chats-9b52c-default-rtdb","storageBucket":"chats-9b52c.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1e04ef05-ad27-483d-b97d-cba17d54def8"}
+[info] i  Using project chats-9b52c (Chats) 
+[info] 
+=== Hosting Setup
+[debug] [2023-11-15T18:20:53.980Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chats-9b52c [none]
+[debug] [2023-11-15T18:20:55.266Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chats-9b52c 200
+[debug] [2023-11-15T18:20:55.267Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chats-9b52c {"projectId":"chats-9b52c","projectNumber":"994450607168","displayName":"Chats","name":"projects/chats-9b52c","resources":{"hostingSite":"chats-9b52c","realtimeDatabaseInstance":"chats-9b52c-default-rtdb","storageBucket":"chats-9b52c.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1e04ef05-ad27-483d-b97d-cba17d54def8"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] +  Wrote public/404.html 
+[debug] [2023-11-15T18:21:38.560Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-11-15T18:21:39.300Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-11-15T18:21:39.301Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.6.0","browserURL":"https://www.gstatic.com/firebasejs/10.6.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.6.0/firebase.tgz"},"live":{"version":"10.6","browserURL":"https://www.gstatic.com/firebasejs/live/10.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.6.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.6.0/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.6.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.6.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.6.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.6.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.6.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.6.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\pankaj\OneDrive\Desktop\projects\check\chat-app-ps 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=764650931&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-11-15T18:22:01.129Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-11-15T18:22:01.130Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-11-15T18:22:03.290Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-11-15T18:22:03.290Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-11-15T18:22:03.309Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-11-15T18:22:04.178Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-11-15T18:22:04.179Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Jarvis-AI007","id":93638641,"node_id":"U_kgDOBZTP8Q","avatar_url":"https://avatars.githubusercontent.com/u/93638641?v=4","gravatar_id":"","url":"https://api.github.com/users/Jarvis-AI007","html_url":"https://github.com/Jarvis-AI007","followers_url":"https://api.github.com/users/Jarvis-AI007/followers","following_url":"https://api.github.com/users/Jarvis-AI007/following{/other_user}","gists_url":"https://api.github.com/users/Jarvis-AI007/gists{/gist_id}","starred_url":"https://api.github.com/users/Jarvis-AI007/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Jarvis-AI007/subscriptions","organizations_url":"https://api.github.com/users/Jarvis-AI007/orgs","repos_url":"https://api.github.com/users/Jarvis-AI007/repos","events_url":"https://api.github.com/users/Jarvis-AI007/events{/privacy}","received_events_url":"https://api.github.com/users/Jarvis-AI007/received_events","type":"User","site_admin":false,"name":"Pankaj Sharma","company":"NSUT","blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":4,"public_gists":0,"followers":0,"following":3,"created_at":"2021-11-03T06:12:39Z","updated_at":"2023-11-06T08:41:56Z","private_gists":0,"total_private_repos":2,"owned_private_repos":2,"disk_usage":5448,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Jarvis-AI007 
+[info] 
+[debug] [2023-11-15T18:22:16.050Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-11-15T18:22:17.026Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-11-15T18:22:17.027Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-11-15T18:22:20.584Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-11-15T18:22:24.147Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-11-15T18:22:24.148Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-11-15T18:22:40.374Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-11-15T18:22:41.453Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-11-15T18:22:41.454Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-11-15T18:23:53.309Z] >>> [apiv2][query] GET https://api.github.com/repos/no/actions/secrets/public-key type=owner
+[debug] [2023-11-15T18:23:54.362Z] <<< [apiv2][status] GET https://api.github.com/repos/no/actions/secrets/public-key 404
+[debug] [2023-11-15T18:23:54.363Z] <<< [apiv2][body] GET https://api.github.com/repos/no/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
